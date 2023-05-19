@@ -1,0 +1,58 @@
+@import "variables/colors"
+
+.auth
+    position: absolute
+    padding: 10px
+    top: 50%
+    left: 50%
+    border: 1px solid #eeeeee
+    border-radius: 5px
+    transform: translateX(-50%) translateY(-50%)
+    box-sizing: border-box
+    p 
+        text-transform: uppercase
+        color: $text-color
+    .btn-signin
+        background-color: $primary-color
+        border: 1px solid $primary-color
+        color: $white
+    .btn-fb
+        background-color: $fb-color
+        border: 1px solid $fb-color
+        color: $white
+    .btn-gl
+        background-color: $google-color
+        border: 1px solid $google-color
+        color: $white
+    .checkbox
+        position: relative
+        width: 2em
+        height: 2em
+        color: $black
+        border: 1px solid $gray
+        border-radius: 4px
+        appearance: none
+        outline: 0
+        transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1)
+        &::before
+            position: absolute
+            content: ''
+            display: block
+            top: 0px
+            left: 6px
+            width: 6px
+            height: 16px
+            border-style: solid
+            border-color: $primary-color
+            border-width: 0 2px 2px 0
+            transform: rotate(45deg)
+            opacity: 0
+        &:checked
+            color: $primary-color
+            &::before
+                 opacity: 1
+    label
+        position: absolute
+        margin-top: 5px
+        margin-left: 5px
+        font-size: 12px
